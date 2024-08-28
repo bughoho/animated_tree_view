@@ -237,10 +237,10 @@ mixin _TreeViewState<Data, Tree extends ITreeNode<Data>,
       ),
     );
 
-    widget.tree.expansionNotifier.value = !widget.showRootNode;
     controller = TreeViewController(_treeViewEventHandler);
-
     WidgetsBinding.instance.addPostFrameCallback((_) {
+      widget.tree.expansionNotifier.value = !widget.showRootNode;
+
       widget.onTreeReady?.call(controller);
     });
   }
