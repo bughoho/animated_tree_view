@@ -640,8 +640,7 @@ class TreeViewState<Data, Tree extends ITreeNode<Data>>
   static const _errorMsg =
       "Animated list state not found from GlobalKey<AnimatedListState>";
 
-  late final GlobalKey<AnimatedListState> _listKey =
-      GlobalKey<AnimatedListState>();
+  final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
 
   final Animation<double>? _animation;
 
